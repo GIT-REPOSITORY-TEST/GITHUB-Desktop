@@ -12,6 +12,7 @@ CLASS zsales_class_git DEFINITION
         matnr TYPE matnr,
         charg TYPE charg_d,
         werks TYPE werks_d,
+        matkl TYPE matkl,
       END OF gty_vbap .
     TYPES:
       gtt_t_vbap TYPE TABLE OF gty_vbap .
@@ -66,7 +67,8 @@ CLASS ZSALES_CLASS_GIT IMPLEMENTATION.
              posnr,
              matnr,
              charg,
-             werks
+             werks,
+             matkl   "New Change V1 - Branch 1
         FROM vbap ##DB_FEATURE_MODE[TABLE_LEN_MAX1]
         INTO TABLE @gt_vbap
         WHERE vbeln IN @it_vbeln
