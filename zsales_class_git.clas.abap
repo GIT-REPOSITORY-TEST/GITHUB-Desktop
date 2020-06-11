@@ -12,11 +12,12 @@ CLASS zsales_class_git DEFINITION
         matnr TYPE matnr,
         charg TYPE charg_d,
         werks TYPE werks_d,
-        matkl TYPE matkl,
+*        matkl TYPE matkl,   "New change V3 - Branch 3
         erdat TYPE erdat,    "New Change V2 - Branch 2
+        ernam TYPE ernam,    "New Change V3 - Branch 3
       END OF gty_vbap .
     TYPES:
-      gtt_t_vbap TYPE TABLE OF gty_vbap .
+      gtt_t_vbap TYPE STANDARD TABLE OF gty_vbap .
 
     DATA gt_vbap TYPE gtt_t_vbap .
 
@@ -69,8 +70,9 @@ CLASS ZSALES_CLASS_GIT IMPLEMENTATION.
              matnr,
              charg,
              werks,
-             matkl,   "New Change V1 - Branch 1
-             erdat    "New Change V2 - Branch 2
+*             matkl,   "New Change V1 - Branch 1  "New Change V3 - Branch 3
+             erdat,    "New Change V2 - Branch 2
+             ernam                                "New Change V3 - Branch 3
         FROM vbap ##DB_FEATURE_MODE[TABLE_LEN_MAX1]
         INTO TABLE @gt_vbap
         WHERE vbeln IN @it_vbeln
