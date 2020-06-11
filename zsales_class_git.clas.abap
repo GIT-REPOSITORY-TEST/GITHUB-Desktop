@@ -13,6 +13,7 @@ CLASS zsales_class_git DEFINITION
         charg TYPE charg_d,
         werks TYPE werks_d,
         matkl TYPE matkl,
+        erdat TYPE erdat,    "New Change V2 - Branch 2
       END OF gty_vbap .
     TYPES:
       gtt_t_vbap TYPE TABLE OF gty_vbap .
@@ -68,7 +69,8 @@ CLASS ZSALES_CLASS_GIT IMPLEMENTATION.
              matnr,
              charg,
              werks,
-             matkl   "New Change V1 - Branch 1
+             matkl,   "New Change V1 - Branch 1
+             erdat    "New Change V2 - Branch 2
         FROM vbap ##DB_FEATURE_MODE[TABLE_LEN_MAX1]
         INTO TABLE @gt_vbap
         WHERE vbeln IN @it_vbeln
