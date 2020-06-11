@@ -17,7 +17,7 @@ CLASS zsales_class_git DEFINITION
         ernam TYPE ernam,    "New Change V3 - Branch 3
       END OF gty_vbap .
     TYPES:
-      gtt_t_vbap TYPE TABLE OF gty_vbap .
+      gtt_t_vbap TYPE STANDARD TABLE OF gty_vbap .
 
     DATA gt_vbap TYPE gtt_t_vbap .
 
