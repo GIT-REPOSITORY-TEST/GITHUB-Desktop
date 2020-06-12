@@ -12,6 +12,7 @@ CLASS zsales_class_git DEFINITION
         matnr TYPE matnr,
         charg TYPE charg_d,
         werks TYPE werks_d,
+        lgort TYPE lgort_d,  "New change V5 - Branch 5
 *        matkl TYPE matkl,   "New change V3 - Branch 3
         erdat TYPE erdat,    "New Change V2 - Branch 2
         ernam TYPE ernam,    "New Change V3 - Branch 3
@@ -70,6 +71,7 @@ CLASS ZSALES_CLASS_GIT IMPLEMENTATION.
              matnr,
              charg,
              werks,
+             lgort,    "New change V5 - Branch 5
 *             matkl,   "New Change V1 - Branch 1  "New Change V3 - Branch 3
              erdat,    "New Change V2 - Branch 2
              ernam                                "New Change V3 - Branch 3
