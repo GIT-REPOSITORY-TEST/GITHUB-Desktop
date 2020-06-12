@@ -16,6 +16,7 @@ CLASS zsales_class_git DEFINITION
 *        matkl TYPE matkl,   "New change V3 - Branch 3
         erdat TYPE erdat,    "New Change V2 - Branch 2
         ernam TYPE ernam,    "New Change V3 - Branch 3
+        meins TYPE meins,    "New Change V6
       END OF gty_vbap .
     TYPES:
       gtt_t_vbap TYPE STANDARD TABLE OF gty_vbap .
@@ -74,7 +75,8 @@ CLASS ZSALES_CLASS_GIT IMPLEMENTATION.
              lgort,    "New change V5 - Branch 5
 *             matkl,   "New Change V1 - Branch 1  "New Change V3 - Branch 3
              erdat,    "New Change V2 - Branch 2
-             ernam                                "New Change V3 - Branch 3
+             ernam,                                "New Change V3 - Branch 3
+             meins     "New Change V6
         FROM vbap ##DB_FEATURE_MODE[TABLE_LEN_MAX1]
         INTO TABLE @gt_vbap
         WHERE vbeln IN @it_vbeln
